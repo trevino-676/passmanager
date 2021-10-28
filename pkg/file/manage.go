@@ -11,7 +11,7 @@ import (
 const pwd_db = "../../.password.db"
 
 func StorePassword(plataform, username, password string) (bool, error) {
-	entry := fmt.Sprintf("%s,%s,%s", plataform, username, password)
+	entry := fmt.Sprintf("%s,%s,%s\n", plataform, username, password)
 	f, err := os.OpenFile(pwd_db, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		log.Fatalf("The file doesnt exist: %v", err)
