@@ -17,4 +17,5 @@
 # Personal ignore
 *db
 .env
+.nvimlog
 
